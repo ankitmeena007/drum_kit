@@ -10,7 +10,7 @@ var tom4= new Audio("sounds/tom-4.mp3");
 var button_list=document.querySelectorAll(".drum");
   for (var i=0; i<button_list.length;i++) {
     button_list[i].addEventListener("click",function(){
-      var buttontext=this.innerText;
+      var buttontext=this.innerHTML;
       onClick(buttontext);
       buttonAnimation(buttontext);
     });
@@ -54,10 +54,9 @@ function onClick(key1){
       tom4.play();
       break;
 
-    default:
+    default: console.log();
       // crash.play();
 
-      break;
 
   }
 }
@@ -67,7 +66,7 @@ function onClick(key1){
 function buttonAnimation(currentKey) {
   var activeButton=document.querySelector("."+currentKey);
   activeButton.classList.add("pressed");
-  setTimeout(function(){activeButton.classList.remove("pressed")},100)
+  setTimeout(function(){activeButton.classList.remove("pressed")},100);
   //syntax: setTimeout(function,milliseconds,param1 opt ,param2 opt ...)
 }
 
