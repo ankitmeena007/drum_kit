@@ -67,7 +67,7 @@ function onClick(key1){
 function buttonAnimation(currentKey) {
   var activeButton=document.querySelector("."+currentKey);
   activeButton.classList.add("pressed");
-  setTimeout(function(){activeButton.classList.remove("pressed")},3000)
+  setTimeout(function(){activeButton.classList.remove("pressed")},100)
   //syntax: setTimeout(function,milliseconds,param1 opt ,param2 opt ...)
 }
 
